@@ -50,7 +50,7 @@ namespace DotNetCoreSqlDb
             else
             {
                 services.AddDbContext<MyDatabaseContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
+                    options.UseSqlite("Data Source=localdatabase.db"));
             }
 
             // Automatically perform database migration
